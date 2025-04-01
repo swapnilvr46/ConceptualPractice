@@ -1,20 +1,20 @@
 public class Fruits {
-    String fruitName;
-    String fruitType;
-    String fruitColour;
-    String fruitVitamin;
-    String fruitFlavour;
+    String name;
+    String type;
+    String colour;
+    String vitamin;
+    String flavour;
 
     Fruits() {
         System.out.println(" Which fruits are you looking for ? ");
     }
 
-    Fruits(String fruitName, String fruitType, String fruitColour, String fruitVitamin, String fruitFlavour) {
-        this.fruitName = fruitName;
-        this.fruitType = fruitType;
-        this.fruitColour = fruitColour;
-        this.fruitVitamin = fruitVitamin;
-        this.fruitFlavour = fruitFlavour;
+    Fruits(String name, String type, String colour, String vitamin, String flavour) {
+        this.name = name;
+        this.type = type;
+        this.colour = colour;
+        this.vitamin = vitamin;
+        this.flavour = flavour;
     }
 
     void fruitStartedBuddingStage() {
@@ -36,11 +36,11 @@ public class Fruits {
     }
 
     void fruitDetails() {
-        System.out.println("Fruit Name: " + fruitName);
-        System.out.println("Fruit Type: " + fruitType);
-        System.out.println("Fruit colour: " + fruitColour);
-        System.out.println("Fruit vitamin: " + fruitVitamin);
-        System.out.println("Fruit flavour: " + fruitFlavour);
+        System.out.println("Fruit Name: " + name);
+        System.out.println("Fruit Type: " + type);
+        System.out.println("Fruit colour: " + colour);
+        System.out.println("Fruit vitamin: " + vitamin);
+        System.out.println("Fruit flavour: " + flavour);
     }
 
     public static void main(String[] args) {
@@ -53,6 +53,4 @@ public class Fruits {
         watermelon.fruitDetails();
         watermelon.fruitReadyForConsume();
     }
-
-
 }
