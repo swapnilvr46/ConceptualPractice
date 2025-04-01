@@ -5,10 +5,6 @@ public class Fruits {
     String vitamin;
     String flavour;
 
-    Fruits() {
-        System.out.println(" Which fruits are you looking for ? ");
-    }
-
     Fruits(String name, String type, String colour, String vitamin, String flavour) {
         this.name = name;
         this.type = type;
