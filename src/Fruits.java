@@ -40,7 +40,7 @@ public class Fruits {
     }
 
     public static void main(String[] args) {
-        Fruits fruits = new Fruits();
+        System.out.println(" Which fruits are you looking for ? ");
         Fruits apple = new Fruits("Apple", "all season", "red", "vitamin C", "sweet and mild sour");
         Fruits blackberry = new Fruits("blackberry", "monsoon season", "blackpurple", "vitamin c & a", "sour");
         Fruits watermelon = new Fruits("watermelon", "summer season", "green and red", "vitamin c & a", "Sweet");
