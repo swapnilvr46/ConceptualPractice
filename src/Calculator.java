@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Calculator {
-    void getInput() {
+    UserInput getInput() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the first number");
         int firstNumber = scanner.nextInt();
@@ -9,24 +9,24 @@ public class Calculator {
         int secondNumber = scanner.nextInt();
         System.out.println("which operation need to perform:  '+' ,'-' ,'*' ,'/' ");
         String operatationName = scanner.next();
-        performOperation(operatationName, firstNumber, secondNumber);
+        return new UserInput(firstNumber, secondNumber, operatationName);
     }
 
-    void performOperation(String operatationName, int firstNumber, int secondNumber) {
-
-        switch (operatationName) {
+    void performOperation() {
+        UserInput userInput = getInput();
+        switch (userInput.operation) {
             case "+":
-                System.out.println("Addition of Numbers: " + add(firstNumber, secondNumber));
+                System.out.println("Addition of Numbers: " + add(userInput.firstNumber, userInput.secondNumber));
                 break;
             case "-":
-                System.out.println("Subtration of Numbers: " + subtract(firstNumber, secondNumber));
+                System.out.println("Subtration of Numbers: " + subtract(userInput.firstNumber, userInput.secondNumber));
                 break;
             case "*":
-                System.out.println("Multiplication of Numbers: " + multiply(firstNumber, secondNumber));
+                System.out.println("Multiplication of Numbers: " + multiply(userInput.firstNumber, userInput.secondNumber));
                 break;
             case "/":
-                if (secondNumber >= 1) {
-                    System.out.println("Division of Numbers: " + division(firstNumber, secondNumber));
+                if (userInput.secondNumber >= 1) {
+                    System.out.println("Division of Numbers: " + division(userInput.firstNumber, userInput.secondNumber));
                     break;
                 } else {
                     System.out.println("Division not divide by zero: ");
@@ -55,6 +55,18 @@ public class Calculator {
 
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
-        calculator.getInput();
+        calculator.performOperation();
+    }
+}
+
+class UserInput {
+    int firstNumber;
+    int secondNumber;
+    String operation;
+
+    UserInput(int firstNumber, int secondNumber, String operation) {
+        this.firstNumber = firstNumber;
+        this.secondNumber = secondNumber;
+        this.operation = operation;
     }
 }
