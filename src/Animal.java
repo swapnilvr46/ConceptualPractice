@@ -55,5 +55,7 @@ public class Animal {
         cat.aniamlDetails();
         dog.sleep();
         bird.fly();
+        dog.awake();
+        cat.walk();
     }
 }
