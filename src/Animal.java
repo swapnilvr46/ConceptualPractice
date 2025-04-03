@@ -14,27 +14,27 @@ public class Animal {
         this.sound = sound;
     }
 
-    void animalEat() {
+    void eat() {
 
         System.out.println("Aniaml : Having Food");
     }
 
-    void animalSleep() {
+    void sleep() {
 
         System.out.println("Aniaml : Sleeping");
     }
 
-    void animalAwake() {
+    void awake() {
 
         System.out.println("Animal : Just Woke Up");
     }
 
-    void animalWalk() {
+    void walk() {
 
         System.out.println("Aniaml : Just Walking");
     }
 
-    void animalFly() {
+    void fly() {
 
         System.out.println("Animal : Flying");
     }
@@ -52,9 +52,9 @@ public class Animal {
         Animal cat = new Animal("Cat", "Persian", "2 months", "brown", "Meow");
         Animal dog = new Animal("Dog", "Husky", "1 month", "black", "Bow-Bow");
         Animal bird = new Animal("Bird", "Parrot", "15 days", "Green", "Whisle");
-        cat.animalEat();
+        cat.eat();
         cat.aniamlDetails();
-        dog.animalSleep();
-        bird.animalFly();
+        dog.sleep();
+        bird.fly();
     }
 }
