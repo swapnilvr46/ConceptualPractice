@@ -4,7 +4,6 @@ public class Animal {
     String age;
     String colour;
     String sound;
-    String name;
 
     Animal(String spices, String type, String age, String colour, String sound) {
         this.spices = spices;
