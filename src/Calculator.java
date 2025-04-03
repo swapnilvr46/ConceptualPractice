@@ -22,7 +22,7 @@ public class Calculator {
                 System.out.println("Subtration of Numbers: " + subtract(firstNumber, secondNumber));
                 break;
             case "*":
-                System.out.println("Multiplication of Numbers: " + multiplication(firstNumber, secondNumber));
+                System.out.println("Multiplication of Numbers: " + multiply(firstNumber, secondNumber));
                 break;
             case "/":
                 if (secondNumber >= 1) {
@@ -45,7 +45,7 @@ public class Calculator {
         return firstNumber - secondNumber;
     }
 
-    int multiplication(int firstNumber, int secondNumber) {
+    int multiply(int firstNumber, int secondNumber) {
         return firstNumber * secondNumber;
     }
 
